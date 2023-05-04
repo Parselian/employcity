@@ -1,0 +1,55 @@
+.form {
+  width: 100%;
+
+  &__select {
+    grid-area: systems
+  }
+
+  &__input {
+    &s {
+      margin-bottom: 64px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-flow: row;
+      grid-template-areas: 'systems email name' 'range range file';
+      grid-gap: 30px;
+    }
+
+    &-email {
+      grid-area: email
+    }
+
+    &-name {
+      grid-area: name
+    }
+  }
+
+  &__range {
+    grid-area: range
+  }
+
+  &__file {
+    grid-area: file
+  }
+
+  &__submit {
+    margin: 0 auto;
+    max-width: 370px;
+    width: 100%;
+  }
+
+  @media (max-width: 992px) {
+    &__inputs {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'email name' 'systems file' 'range range';
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__inputs {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'systems' 'email' 'name' 'range' 'file' ;
+    }
+
+  }
+}

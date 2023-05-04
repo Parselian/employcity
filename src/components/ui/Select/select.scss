@@ -1,0 +1,109 @@
+.select {
+  &_unrolled {
+    .select {
+      &__box {
+        background-color: $select-bg-color;
+        border-color: $select-bg-color;
+        -webkit-border-radius: 3px 3px 0 0;
+        -moz-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0;
+        &-icon {
+          transform: scale(1, -1);
+          filter: invert(1);
+        }
+        &-val {
+          color: $alt-color
+        }
+      }
+
+      &__dropdown {
+        padding: 12px 10px;
+        max-height: 180px;
+        border-width: 1px;
+        opacity: 1;
+      }
+    }
+  }
+
+  position: relative;
+  cursor: pointer;
+
+  &__box {
+    padding: 12px 10px;
+    display: flex;
+    background-color: $input-bg-color;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $alt-color;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    transition: .2s;
+
+    &-val {
+      font-size: 18px;
+      font-weight: 400;
+      color: $input-text-color;
+    }
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      min-height: 20px;
+      transition: .3s;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    padding: 0 10px;
+    width: 100%;
+    max-height: 0;
+    background-color: $select-dropdown-bg-color;
+    border-right: 1px solid $select-bg-color;
+    border-bottom: 1px solid $select-bg-color;
+    border-left: 1px solid $select-bg-color;
+    border-width: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: .3s, opacity .29s;
+    opacity: 0;
+
+    &::-webkit-scrollbar {
+      background-color: $select-scroll-bg-color;
+      width: 7px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $accent-color;
+      width: 7px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    &-item {
+      font-size: 18px;
+      font-weight: 400;
+      color: $alt-color;
+      transition: .2s;
+      cursor: pointer;
+
+      &:hover, &_selected {
+        color: $active-color;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

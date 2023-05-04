@@ -1,0 +1,48 @@
+@import './variables.scss';
+
+html, body {
+  margin: 0;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif, -apple-system;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+    color: $main-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+  width: calc(100% - 30px);
+}
+
+.line-break {
+  display: block;
+}
+
+.text {
+  &-accent {
+    color: $accent-color;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  outline: none
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,56 @@
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  position: fixed;
+  background-color: $header-bg-color;
+
+  &__wrap {
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-family: 'Raleway', 'Lato', sans-serif, -apple-system;
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $alt-color;
+
+    &_accent {
+      color: $active-color;
+    }
+  }
+
+  &__menu {
+    display: flex;
+
+    &-item {
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $alt-color;
+      transition: .2s;
+      cursor: pointer;
+
+      &:hover {
+        color: $active-color;
+      }
+
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+  }
+
+
+  @media (max-width: 992px) {
+    &__menu {
+      display: none;
+    }
+  }
+}

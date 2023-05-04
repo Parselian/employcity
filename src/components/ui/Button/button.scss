@@ -1,0 +1,48 @@
+.button {
+  padding: 15px 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .2s;
+
+  &_primary {
+    color: $alt-color;
+    background-color: $accent-color;
+    border-color: $alt-color;
+
+    &:hover {
+      background-color: lighten($accent-color, 5);
+    }
+
+    &:active {
+      background-color: darken($accent-color, 5);
+    }
+  }
+
+  &_inverted {
+    color: $main-color;
+    background-color: $alt-color;
+    border-color: $border-color;
+
+    &:hover {
+      background-color: darken($alt-color, 5);
+    }
+
+    &:active {
+      background-color: darken($alt-color, 10);
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,43 @@
+.range {
+  &__wrap {
+    display: grid;
+    grid-template-areas: 'label data' 'range range';
+    grid-gap: 8px;
+    grid-template-columns: 1fr auto;
+  }
+
+  grid-area: range;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background-color: $range-bg-color;
+  border: 1px solid $alt-color;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: $range-thumb-bg-color;
+    border-radius: 50%;
+    border: 3px solid $range-thumb-border-color;
+  }
+
+  &__label {
+    grid-area: label;
+    font-size: 18px;
+    color: $alt-color;
+  }
+
+  &__data {
+    grid-area: data;
+    font-size: 18px;
+    color: $alt-color;
+  }
+}

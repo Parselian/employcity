@@ -1,0 +1,17 @@
+.input {
+  padding: 12px 10px;
+  color: $input-text-color;
+  background-color: $input-bg-color;
+  border: 1px solid $alt-color;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $input-text-color;
+  }
+
+  &_error {
+    border-color: $error-color;
+  }
+}
